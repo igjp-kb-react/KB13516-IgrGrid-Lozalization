@@ -2,9 +2,11 @@ import {
   DisplayDensity,
   IgrColumn,
   IgrGrid,
+  IgrPaginator,
 } from "@infragistics/igniteui-react-grids";
 import "./app.css";
-import { JPResourceStrings } from "./ja-JP";
+import { GridResourceStrings } from "./gridResourceStrings";
+import { PaginatorResourceStrings } from "./paginatorResourceStrings";
 
 const sampleData = [
   { id: 1, name: "John", country: "USA", age: 37 },
@@ -27,7 +29,7 @@ const sampleData = [
 
 export const App = () => {
   return (
-    <div style={{ maxWidth: "600px", margin: "24px auto" }}>
+    <div style={{ maxWidth: "900px", margin: "24px auto" }}>
       <IgrGrid
         data={sampleData}
         primaryKey="id"
@@ -36,8 +38,12 @@ export const App = () => {
         allowFiltering="true"
         filterMode="ExcelStyleFilter"
         displayDensity={DisplayDensity.Cosy}
-        resourceStrings={JPResourceStrings}
+        resourceStrings={GridResourceStrings}
       >
+        <IgrPaginator
+          perPage="10"
+          resourceStrings={PaginatorResourceStrings}
+        ></IgrPaginator>
         <IgrColumn field="id" header="ID" headerGroupClasses="VerticalHeader" />
         <IgrColumn field="name" header="Name" />
         <IgrColumn field="country" header="Country" />

@@ -1,5 +1,6 @@
-export const JPResourceStrings = {
-  igx_grid_groupByArea_message:"列ヘッダーをここへドラッグして列をグループ化します。",
+export const GridResourceStrings = {
+  igx_grid_groupByArea_message:
+    "列ヘッダーをここへドラッグして列をグループ化します。",
   igx_grid_emptyFilteredGrid_message: "レコードは見つかりませんでした。",
   igx_grid_emptyGrid_message: "グリッドにデータがありません。",
   igx_grid_filter: "フィルター",
